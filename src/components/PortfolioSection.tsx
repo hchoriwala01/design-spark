@@ -104,14 +104,14 @@ export const PortfolioSection = () => {
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (
+
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
                     ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-neon'
                     : 'glass-card text-muted-foreground hover:text-foreground hover:border-primary/50'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -131,7 +131,13 @@ export const PortfolioSection = () => {
                 {/* Project Image */}
                 <div
                   className="aspect-[4/3] transition-transform duration-500 group-hover:scale-110"
-                  style={{ background: project.image }}
+                  style={{
+                    backgroundImage: project.image.startsWith('http')
+                      ? `url(${project.image})`
+                      : project.image,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
                 >
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="font-display font-bold text-2xl text-white/50">{project.id}</span>
@@ -140,14 +146,13 @@ export const PortfolioSection = () => {
 
                 {/* Overlay */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent transition-opacity duration-300 flex flex-col justify-end p-5 ${
-                    hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent transition-opacity duration-300 flex flex-col justify-end p-5 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                   <span className="text-primary text-xs font-medium mb-1">{project.category}</span>
                   <h3 className="font-display font-bold text-lg mb-2">{project.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>
-                  
+
                   <div className="flex items-center gap-2">
                     <Button variant="glass" size="sm">
                       <Eye className="w-4 h-4" />
@@ -161,9 +166,8 @@ export const PortfolioSection = () => {
 
                 {/* Bottom Info (Always visible) */}
                 <div
-                  className={`absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background to-transparent transition-opacity duration-300 ${
-                    hoveredProject === project.id ? 'opacity-0' : 'opacity-100'
-                  }`}
+                  className={`absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background to-transparent transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-0' : 'opacity-100'
+                    }`}
                 >
                   <span className="text-primary text-xs font-medium">{project.category}</span>
                   <h3 className="font-display font-semibold text-sm mt-1">{project.title}</h3>
