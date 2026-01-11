@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hchoriwala01.github.io//design-spark",
+  "homepage": "https://hchoriwala01.github.io/design-spark",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
