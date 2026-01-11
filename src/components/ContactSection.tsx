@@ -19,8 +19,8 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: 'Himatnagar',
-    value: 'Himatnagar',
+    label: 'Ahmedabad',
+    value: 'Ahmedabad',
     href: '#',
   },
 ];
