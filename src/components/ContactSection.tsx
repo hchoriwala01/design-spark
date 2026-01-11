@@ -19,8 +19,8 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: 'Location',
-    value: 'Available Worldwide',
+    label: 'Himatnagar',
+    value: 'Himatnagar',
     href: '#',
   },
 ];
