@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 8888888888',
+    value: '+91 9106646539',
     href: 'tel:+1234567890',
   },
   {
