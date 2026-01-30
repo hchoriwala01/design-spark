@@ -106,7 +106,7 @@ export const HeroSection = () => {
           {/* Stats Preview */}
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-lg mx-auto fade-in-up delay-400">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">2+</div>
+              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">3+</div>
               <div className="text-sm text-muted-foreground">Years Exp.</div>
             </div>
             <div className="text-center">
