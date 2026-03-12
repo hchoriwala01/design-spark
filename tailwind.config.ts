@@ -62,9 +62,9 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         neon: {
-          blue: "#00D9FF",
-          purple: "#9D00FF",
-          pink: "#FF00E5",
+          blue: "#47C6FF",
+          purple: "#3350C4",
+          yellow: "#EEFF4A",
         },
       },
       borderRadius: {
@@ -134,16 +134,17 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, hsl(240 20% 6%) 0%, hsl(260 30% 12%) 50%, hsl(240 20% 6%) 100%)",
-        "card-gradient": "linear-gradient(135deg, hsl(240 20% 12% / 0.8) 0%, hsl(260 20% 10% / 0.6) 100%)",
-        "neon-gradient": "linear-gradient(135deg, #00D9FF 0%, #9D00FF 100%)",
+        "hero-gradient": "linear-gradient(135deg, hsl(262 78% 8%) 0%, hsl(262 55% 14%) 50%, hsl(262 78% 8%) 100%)",
+        "card-gradient": "linear-gradient(135deg, hsl(262 55% 14% / 0.8) 0%, hsl(262 40% 12% / 0.6) 100%)",
+        "neon-gradient": "linear-gradient(135deg, #47C6FF 0%, #3350C4 100%)",
       },
       boxShadow: {
-        neon: "0 0 40px rgba(0, 217, 255, 0.3)",
-        "neon-intense": "0 0 60px rgba(0, 217, 255, 0.4), 0 0 100px rgba(157, 0, 255, 0.2)",
+        neon: "0 0 40px rgba(71, 198, 255, 0.3)",
+        "neon-intense": "0 0 60px rgba(71, 198, 255, 0.4), 0 0 100px rgba(51, 80, 196, 0.2)",
         glass: "0 8px 32px 0 rgba(0, 0, 0, 0.36)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
+

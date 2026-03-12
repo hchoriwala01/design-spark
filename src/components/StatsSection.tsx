@@ -11,13 +11,13 @@ const stats = [
   },
   {
     icon: Users,
-    value: 30,
+    value: 100,
     suffix: '+',
     label: 'Happy Clients',
   },
   {
     icon: Award,
-    value: 2,
+    value: 3,
     suffix: '+',
     label: 'Years Experience',
   },
@@ -33,7 +33,7 @@ export const StatsSection = () => {
   return (
     <section className="py-16 relative overflow-hidden bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(71,198,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(71,198,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

@@ -1,14 +1,14 @@
 import { ScrollReveal } from './ScrollReveal';
 
 const tools = [
-  { name: 'Figma', color: '#F24E1E' },
-  { name: 'Adobe XD', color: '#FF61F6' },
-  { name: 'Photoshop', color: '#31A8FF' },
-  { name: 'Illustrator', color: '#FF9A00' },
-  { name: 'After Effects', color: '#9999FF' },
-  { name: 'Sketch', color: '#F7B500' },
-  { name: 'Framer', color: '#0055FF' },
-  { name: 'Webflow', color: '#4353FF' },
+  { name: 'Figma', color: '#F24E1E', file: 'Figma.svg' },
+  { name: 'Adobe XD', color: '#FF61F6', file: 'AdobeXD.svg' },
+  { name: 'Photoshop', color: '#31A8FF', file: 'Photoshop.svg' },
+  { name: 'Illustrator', color: '#FF9A00', file: 'Illustrator.svg' },
+  { name: 'After Effects', color: '#9999FF', file: 'AfterEffects.svg' },
+  { name: 'Sketch', color: '#F7B500', file: 'Sketch.svg' },
+  { name: 'Framer', color: '#0055FF', file: 'Framer.svg' },
+  { name: 'Webflow', color: '#4353FF', file: 'Webflow.svg' },
 ];
 
 export const ToolsSection = () => {
@@ -32,12 +32,13 @@ export const ToolsSection = () => {
                 key={index}
                 className="group glass-card-hover px-8 py-4 flex items-center gap-3"
               >
-                {/* Icon Placeholder */}
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm"
-                  style={{ backgroundColor: `${tool.color}20`, color: tool.color }}
-                >
-                  {tool.name.charAt(0)}
+                {/* Original Icon */}
+                <div className="flex items-center justify-center w-6 h-6">
+                  <img
+                    src={`${import.meta.env.BASE_URL}icons/${tool.file}`}
+                    alt={`${tool.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                   {tool.name}

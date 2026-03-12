@@ -51,7 +51,7 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="section-padding relative overflow-hidden bg-card/30">
       {/* Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(71,198,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(71,198,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container-custom relative z-10">
         <ScrollReveal>

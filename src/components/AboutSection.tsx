@@ -12,7 +12,7 @@ const skills = [
 ];
 
 const highlights = [
-  { icon: Briefcase, value: '2+', label: 'Years Experience' },
+  { icon: Briefcase, value: '3+', label: 'Years Experience' },
   { icon: Award, value: '50+', label: 'Projects Done' },
   { icon: Coffee, value: '∞', label: 'Cups of Coffee' },
 ];
@@ -44,19 +44,17 @@ export const AboutSection = () => {
             <div className="relative">
               {/* Profile Card */}
               <div className="relative glass-card p-4 max-w-md mx-auto lg:mx-0">
-                <div className="aspect-[4/5] rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
-                      <span className="font-display font-bold text-5xl text-primary-foreground">H</span>
-                    </div>
-                    <h3 className="font-display font-bold text-2xl mb-2">Hisamuddin</h3>
-                    <p className="text-muted-foreground">UI/UX & Graphics Designer</p>
-                  </div>
+                <div className="aspect-[4/5] rounded-xl overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
+                    alt="Hisamuddin - UI/UX & Graphics Designer"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
 
                 {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 glass-card px-4 py-2 neon-glow">
-                  <span className="gradient-text font-semibold">2+ Years Exp.</span>
+                  <span className="gradient-text font-semibold">3+ Years Exp.</span>
                 </div>
               </div>
 
@@ -82,7 +80,7 @@ export const AboutSection = () => {
                 Hi, I'm Hisamuddin – Your Creative Partner
               </h3>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                With over 2 years of experience in UI/UX and graphic design, I specialize in creating 
+                With over 3 years of experience in UI/UX and graphic design, I specialize in creating 
                 intuitive digital experiences that not only look beautiful but also solve real problems. 
                 My approach combines creativity with strategic thinking to deliver designs that resonate 
                 with users and drive results.

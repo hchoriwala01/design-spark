@@ -38,7 +38,7 @@ export const ProcessSection = () => {
   return (
     <section id="process" className="section-padding relative overflow-hidden bg-card/30">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,217,255,0.05),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(71,198,255,0.05),transparent_70%)]" />
 
       <div className="container-custom relative z-10">
         <ScrollReveal>

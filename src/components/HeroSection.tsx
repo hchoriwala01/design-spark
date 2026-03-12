@@ -46,7 +46,7 @@ export const HeroSection = () => {
         </div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,217,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,217,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(71,198,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(71,198,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
       </div>
 
       {/* Main Content */}
@@ -79,8 +79,8 @@ export const HeroSection = () => {
                 />
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#00D9FF" />
-                    <stop offset="100%" stopColor="#9D00FF" />
+                    <stop offset="0%" stopColor="#47C6FF" />
+                    <stop offset="100%" stopColor="#3350C4" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -114,7 +114,7 @@ export const HeroSection = () => {
               <div className="text-sm text-muted-foreground">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">30+</div>
+              <div className="text-3xl md:text-4xl font-display font-bold gradient-text">100+</div>
               <div className="text-sm text-muted-foreground">Clients</div>
             </div>
           </div>
