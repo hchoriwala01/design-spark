@@ -17,19 +17,19 @@ const projects = [
   },
   {
     id: 2,
-    title: 'E-commerce Dashboard',
+    title: 'iQuQ App – Social Music App Where Everyone Controls the Vibe',
     category: 'UI/UX',
-    description: 'Modern analytics dashboard for an e-commerce platform with real-time data visualization.',
-    image: 'linear-gradient(135deg, #47C6FF 0%, #3350C4 100%)',
-    tools: ['Figma', 'Sketch'],
+    description: 'A social music app featuring real-time voting, host control, and fast song additions — letting everyone shape the playlist together.',
+    image: '/02.jpg',
+    tools: ['Figma', 'Adobe XD'],
   },
   {
     id: 3,
-    title: 'Restaurant Brand Identity',
-    category: 'Branding',
-    description: 'Complete brand identity package including logo, color palette, and marketing materials.',
-    image: 'linear-gradient(135deg, #3350C4 0%, #1B0B54 100%)',
-    tools: ['Illustrator', 'Photoshop'],
+    title: 'SourceVehicle – Middle East\'s First B2B Automotive Export Marketplace',
+    category: 'Web Design',
+    description: 'SourceVehicle is the Middle East\'s first dedicated vehicle inventory aggregator built for global export markets. The platform connects authorized dealers and sellers in Dubai with international buyers across Nigeria, Kazakhstan, GCC and Africa through a seamless B2B digital marketplace.',
+    image: '/Source-Vehicle-Portfolio-IMG-01.jpg',
+    tools: ['Figma', 'Adobe XD'],
   },
   {
     id: 4,
@@ -135,7 +135,7 @@ export const PortfolioSection = () => {
                 <div
                   className="aspect-[4/3] transition-transform duration-500 group-hover:scale-110"
                   style={{
-                    backgroundImage: project.image.startsWith('http')
+                    backgroundImage: project.image.startsWith('http') || project.image.startsWith('/')
                       ? `url(${project.image})`
                       : project.image,
                     backgroundSize: 'cover',
@@ -199,7 +199,7 @@ export const PortfolioSection = () => {
                 <div 
                   className="h-64 md:h-[500px] w-full bg-cover bg-center"
                   style={{
-                    backgroundImage: selectedProject.image.startsWith('http')
+                    backgroundImage: selectedProject.image.startsWith('http') || selectedProject.image.startsWith('/')
                       ? `url(${selectedProject.image})`
                       : selectedProject.image,
                   }}
