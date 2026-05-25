@@ -6,13 +6,24 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from './ui/dial
 
 const categories = ['All', 'UI/UX', 'Graphics', 'Branding', 'Web Design'];
 
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  tools: string[];
+  link?: string;
+  linkText?: string;
+}
+
+const projects: Project[] = [
   {
     id: 1,
-    title: 'Banking App Redesign',
+    title: 'Etmad Topup – Digitizing Mobile Recharge',
     category: 'UI/UX',
-    description: 'Complete redesign of a mobile banking application with focus on user experience and accessibility.',
-    image: 'https://res.cloudinary.com/ddwzgcbwi/image/upload/v1768129770/adwaliah-ecommerce-architect_iiwiy8.png',
+    description: 'Etmad Topup needed a unified recharge platform, and I designed a Flutter-based omni-channel application with a powerful web admin panel and role-based access system for seamless operational control and real-time transaction monitoring.',
+    image: '/ETMAD_PAY_IMG_02_3d68f808a2.jpg',
     tools: ['Figma', 'Adobe XD'],
   },
   {
@@ -22,6 +33,7 @@ const projects = [
     description: 'A social music app featuring real-time voting, host control, and fast song additions — letting everyone shape the playlist together.',
     image: '/02.jpg',
     tools: ['Figma', 'Adobe XD'],
+    link: 'https://apps.apple.com/us/app/iquq-shared-playlist-voting/id6751897567',
   },
   {
     id: 3,
@@ -30,22 +42,25 @@ const projects = [
     description: 'SourceVehicle is the Middle East\'s first dedicated vehicle inventory aggregator built for global export markets. The platform connects authorized dealers and sellers in Dubai with international buyers across Nigeria, Kazakhstan, GCC and Africa through a seamless B2B digital marketplace.',
     image: '/Source-Vehicle-Portfolio-IMG-01.jpg',
     tools: ['Figma', 'Adobe XD'],
+    link: 'https://www.sourcevehicle.com/',
   },
   {
     id: 4,
-    title: 'Social Media Campaign',
-    category: 'Graphics',
-    description: 'Eye-catching social media graphics for a product launch campaign.',
-    image: 'linear-gradient(135deg, #EEFF4A 0%, #47C6FF 100%)',
-    tools: ['Photoshop', 'After Effects'],
+    title: 'Etmad Topup – Digitizing Mobile Recharge',
+    category: 'UI/UX',
+    description: 'Etmad Topup needed a unified recharge platform, and Junkies Coder built a Flutter-based omni-channel system with a web admin panel and role-based access for real-time transaction visibility and operational control.',
+    image: '/ETMAD_PAY_IMG_02_3d68f808a2.jpg',
+    tools: ['Figma', 'Flutter'],
   },
   {
     id: 5,
-    title: 'Portfolio Website',
-    category: 'Web Design',
-    description: 'Modern portfolio website design for a photographer with gallery features.',
-    image: 'linear-gradient(135deg, #1B0B54 0%, #47C6FF 100%)',
-    tools: ['Figma', 'Webflow'],
+    title: 'Inspect & Buy – Try Karo, Fir Buy Karo',
+    category: 'UI/UX',
+    description: 'Designed a clean and intuitive app experience for Inspect & Buy, transforming the traditional shopping journey into a smarter O2O experience. Focused on easy navigation, modern visuals, and a seamless inspection-to-purchase workflow.',
+    image: '/I_and_B_01_f862479838.jpg',
+    tools: ['Figma', 'Adobe XD'],
+    link: 'https://play.google.com/store/apps/details?id=com.inb.customer&hl=en_IN',
+    linkText: 'App Link',
   },
   {
     id: 6,
@@ -142,9 +157,6 @@ export const PortfolioSection = () => {
                     backgroundPosition: 'center',
                   }}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-display font-bold text-2xl text-white/50">{project.id}</span>
-                  </div>
                 </div>
 
                 {/* Overlay */}
@@ -197,7 +209,7 @@ export const PortfolioSection = () => {
               <div className="grid md:grid-cols-2">
                 {/* Left side: Image */}
                 <div 
-                  className="h-64 md:h-[500px] w-full bg-cover bg-center"
+                  className="h-64 md:h-[500px] w-full bg-contain bg-no-repeat bg-center"
                   style={{
                     backgroundImage: selectedProject.image.startsWith('http') || selectedProject.image.startsWith('/')
                       ? `url(${selectedProject.image})`
@@ -227,8 +239,8 @@ export const PortfolioSection = () => {
                     </div>
                   </div>
                   
-                  <Button variant="hero" className="w-fit" onClick={() => window.open('#', '_blank')}>
-                    Visit Website
+                  <Button variant="hero" className="w-fit" onClick={() => window.open(selectedProject.link || '#', '_blank')}>
+                    {selectedProject.linkText || 'Visit Website'}
                     <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
